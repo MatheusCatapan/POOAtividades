@@ -21,7 +21,7 @@
         public $nPaginas;
         public $disponibilidade;
         public $disponivel;
-        public Pessoa $alugadoPor;
+        public $alugadoPor;
 
         public function __construct ($nome, $autor, $nPaginas, $dispinibilidades) {
             $this->nome = $nome;
@@ -53,10 +53,11 @@
     }
 
     $matheus = new Pessoa ("Matheus", "Rua das Rosas 9", "m.oliveira.mo355@gmail.com", "42988634181");
-    
-    $livro1 = new Livros ("Teste", "tigres" , 1500, false);
+    $tigre = new Pessoa ("tigre", "rua das orquideas", "tigre@gmail.com", "89573985");
+    $livro1 = new Livros ("Teste", "tigresss" , 1500, false);
     $livro2 = new Livros ("Testing", "ursos" , 1500, true);
     
-    
-    $livro1->alugar($matheus);
+    $livro1->alugar($tigre);
+    $livro2->alugar($matheus);
     $livro1->devolver();
+    $livro2->devolver();
