@@ -22,8 +22,6 @@
 
     class Gerente extends Funcionario {
 
-        public $nome;
-        public $cargo;
         public $quantidadeDeColaboradores;
         private $adicionalPorColaborador = 250;
 
